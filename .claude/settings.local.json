@@ -12,7 +12,10 @@
       "PowerShell($body = '{\"service_type_id\":2,\"to_district_id\":1442,\"to_ward_code\":\"20314\",\"weight\":500}'; $response = Invoke-WebRequest -Uri \"https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/fee\" -Method POST -Headers @{\"Token\"=\"06daf368-597f-11f1-a973-aee5264794df\";\"ShopId\"=\"2511632\";\"Content-Type\"=\"application/json\"} -Body $body -UseBasicParsing 2>&1; $response.StatusCode; $response.Content)",
       "PowerShell($response = Invoke-WebRequest -Uri \"https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shop/all\" -Method GET -Headers @{\"Token\"=\"06daf368-597f-11f1-a973-aee5264794df\";\"Content-Type\"=\"application/json\"} -UseBasicParsing 2>&1; $response.Content)",
       "PowerShell($body = '{\"service_type_id\":2,\"to_district_id\":1442,\"to_ward_code\":\"20314\",\"weight\":500}'; $response = Invoke-WebRequest -Uri \"https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/fee\" -Method POST -Headers @{\"Token\"=\"06daf368-597f-11f1-a973-aee5264794df\";\"ShopId\"=\"200434\";\"Content-Type\"=\"application/json\"} -Body $body -UseBasicParsing; $response.Content)",
-      "Bash(curl -s -X POST https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/fee -H 'Content-Type: application/json' -H 'Token: 06daf368-597f-11f1-a973-aee5264794df' -H 'ShopId: 200434' -d '{ *)"
+      "Bash(curl -s -X POST https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/fee -H 'Content-Type: application/json' -H 'Token: 06daf368-597f-11f1-a973-aee5264794df' -H 'ShopId: 200434' -d '{ *)",
+      "Bash(php -r \"copy\\('https://getcomposer.org/installer', 'composer-setup.php'\\);\")",
+      "Bash(php composer-setup.php --install-dir=/c/xampp/php --filename=composer)",
+      "Bash(php -r \"unlink\\('composer-setup.php'\\);\")"
     ]
   }
 }

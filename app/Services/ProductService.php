@@ -35,6 +35,18 @@ class ProductService
             unset($data['screen'], $data['cpu'], $data['ram'], $data['storage'], $data['battery']);
         }
 
+        // Xử lý specs_en nếu gửi dạng riêng lẻ
+        if (isset($data['screen_en']) || isset($data['cpu_en'])) {
+            $data['specs_en'] = [
+                'screen' => $data['screen_en'] ?? 'N/A',
+                'cpu' => $data['cpu_en'] ?? 'N/A',
+                'ram' => $data['ram_en'] ?? 'N/A',
+                'storage' => $data['storage_en'] ?? 'N/A',
+                'battery' => $data['battery_en'] ?? 'N/A',
+            ];
+            unset($data['screen_en'], $data['cpu_en'], $data['ram_en'], $data['storage_en'], $data['battery_en']);
+        }
+
         $skusData = $data['skus'] ?? [];
         unset($data['skus']);
 
@@ -80,6 +92,18 @@ class ProductService
                 'battery' => $data['battery'] ?? 'N/A',
             ];
             unset($data['screen'], $data['cpu'], $data['ram'], $data['storage'], $data['battery']);
+        }
+
+        // Xử lý specs_en nếu gửi dạng riêng lẻ
+        if (isset($data['screen_en']) || isset($data['cpu_en'])) {
+            $data['specs_en'] = [
+                'screen' => $data['screen_en'] ?? 'N/A',
+                'cpu' => $data['cpu_en'] ?? 'N/A',
+                'ram' => $data['ram_en'] ?? 'N/A',
+                'storage' => $data['storage_en'] ?? 'N/A',
+                'battery' => $data['battery_en'] ?? 'N/A',
+            ];
+            unset($data['screen_en'], $data['cpu_en'], $data['ram_en'], $data['storage_en'], $data['battery_en']);
         }
 
         $skusData = $data['skus'] ?? null;

@@ -41,10 +41,10 @@ class DatabaseSeeder extends Seeder
 
         // 2. Tạo Categories
         $categoriesData = [
-            ['id' => 1, 'name' => 'Điện thoại', 'slug' => 'phone', 'icon' => 'Smartphone'],
-            ['id' => 2, 'name' => 'Laptop', 'slug' => 'laptop', 'icon' => 'Laptop'],
-            ['id' => 3, 'name' => 'Tablet', 'slug' => 'tablet', 'icon' => 'Tablet'],
-            ['id' => 4, 'name' => 'Phụ kiện', 'slug' => 'accessories', 'icon' => 'Watch'],
+            ['id' => 1, 'name' => 'Điện thoại', 'name_en' => 'Phones', 'slug' => 'phone', 'icon' => 'Smartphone'],
+            ['id' => 2, 'name' => 'Laptop', 'name_en' => 'Laptops', 'slug' => 'laptop', 'icon' => 'Laptop'],
+            ['id' => 3, 'name' => 'Tablet', 'name_en' => 'Tablets', 'slug' => 'tablet', 'icon' => 'Tablet'],
+            ['id' => 4, 'name' => 'Phụ kiện', 'name_en' => 'Accessories', 'slug' => 'accessories', 'icon' => 'Watch'],
         ];
 
         foreach ($categoriesData as $cat) {
@@ -57,16 +57,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 1,
                 'category_id' => 1,
                 'name' => 'iPhone 15 Pro Max 256GB',
+                'name_en' => 'iPhone 15 Pro Max 256GB',
                 'price' => 34990000,
                 'original_price' => 38990000,
                 'image' => 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=600',
                 'description' => 'iPhone 15 Pro Max là dòng iPhone cao cấp nhất với chất liệu Titanium hàng không vũ trụ siêu bền, camera zoom 5x quang học đỉnh cao, hiệu năng quái vật từ chip A17 Pro.',
+                'description_en' => 'The iPhone 15 Pro Max is the most premium iPhone, built with ultra-durable aerospace-grade Titanium, a top-tier 5x optical zoom camera, and monstrous performance powered by the A17 Pro chip.',
                 'specs' => [
                     'screen' => '6.7 inches, Super Retina XDR OLED, 120Hz',
                     'cpu' => 'Apple A17 Pro 6 nhân',
                     'ram' => '8 GB',
                     'storage' => '256 GB',
                     'battery' => '4441 mAh, Sạc nhanh 20W'
+                ],
+                'specs_en' => [
+                    'screen' => '6.7 inches, Super Retina XDR OLED, 120Hz',
+                    'cpu' => 'Apple A17 Pro 6-core',
+                    'ram' => '8 GB',
+                    'storage' => '256 GB',
+                    'battery' => '4441 mAh, 20W fast charging'
                 ],
                 'rating' => 4.8,
                 'reviews_count' => 124,
@@ -76,16 +85,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 2,
                 'category_id' => 2,
                 'name' => 'Macbook Air M3 8GB/256GB',
+                'name_en' => 'MacBook Air M3 8GB/256GB',
                 'price' => 27990000,
                 'original_price' => 29990000,
                 'image' => 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=600',
                 'description' => 'Macbook Air M3 2024 mang đến sự kết hợp hoàn hảo giữa độ mỏng nhẹ tối đa và sức mạnh xử lý vượt trội nhờ chip Apple M3 tiên tiến, thời lượng pin đến 18 tiếng liên tục.',
+                'description_en' => 'The 2024 MacBook Air M3 delivers the perfect blend of ultra-slim, lightweight design and outstanding processing power thanks to the advanced Apple M3 chip, with battery life lasting up to 18 hours.',
                 'specs' => [
                     'screen' => '13.6 inches Liquid Retina, 2560x1664 pixels',
                     'cpu' => 'Apple M3 8-core CPU',
                     'ram' => '8 GB',
                     'storage' => '256 GB SSD',
                     'battery' => 'Thời lượng pin lên tới 18 giờ'
+                ],
+                'specs_en' => [
+                    'screen' => '13.6 inches Liquid Retina, 2560x1664 pixels',
+                    'cpu' => 'Apple M3 8-core CPU',
+                    'ram' => '8 GB',
+                    'storage' => '256 GB SSD',
+                    'battery' => 'Up to 18 hours of battery life'
                 ],
                 'rating' => 4.9,
                 'reviews_count' => 88,
@@ -95,16 +113,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 3,
                 'category_id' => 1,
                 'name' => 'Samsung Galaxy S24 Ultra 5G',
+                'name_en' => 'Samsung Galaxy S24 Ultra 5G',
                 'price' => 29990000,
                 'original_price' => 33990000,
                 'image' => 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=600',
                 'description' => 'Samsung Galaxy S24 Ultra định nghĩa lại trải nghiệm smartphone với quyền năng Galaxy AI vượt trội, camera 200MP zoom không gian 100x và bút S-Pen đa năng tiện lợi.',
+                'description_en' => 'The Samsung Galaxy S24 Ultra redefines the smartphone experience with outstanding Galaxy AI capabilities, a 200MP camera with 100x Space Zoom, and a versatile, convenient S-Pen.',
                 'specs' => [
                     'screen' => '6.8 inches, Dynamic AMOLED 2X, QHD+, 120Hz',
                     'cpu' => 'Snapdragon 8 Gen 3 for Galaxy',
                     'ram' => '12 GB',
                     'storage' => '256 GB',
                     'battery' => '5000 mAh, Sạc nhanh 45W'
+                ],
+                'specs_en' => [
+                    'screen' => '6.8 inches, Dynamic AMOLED 2X, QHD+, 120Hz',
+                    'cpu' => 'Snapdragon 8 Gen 3 for Galaxy',
+                    'ram' => '12 GB',
+                    'storage' => '256 GB',
+                    'battery' => '5000 mAh, 45W fast charging'
                 ],
                 'rating' => 4.7,
                 'reviews_count' => 145,
@@ -114,16 +141,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 4,
                 'category_id' => 3,
                 'name' => 'iPad Pro M4 11 inch 256GB Wifi',
+                'name_en' => 'iPad Pro M4 11-inch 256GB Wi-Fi',
                 'price' => 28990000,
                 'original_price' => 29990000,
                 'image' => 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=600',
                 'description' => 'iPad Pro M4 siêu mỏng, hiệu năng vượt bậc với vi xử lý Apple M4 thế hệ mới, cùng màn hình Ultra Retina XDR sử dụng công nghệ OLED hai lớp tiên tiến nhất thế giới.',
+                'description_en' => 'The iPad Pro M4 is ultra-thin with breakthrough performance powered by the new-generation Apple M4 chip, paired with an Ultra Retina XDR display using the world\'s most advanced dual-layer OLED technology.',
                 'specs' => [
                     'screen' => '11 inches Ultra Retina XDR OLED, 120Hz',
                     'cpu' => 'Apple M4 9-core CPU',
                     'ram' => '8 GB',
                     'storage' => '256 GB',
                     'battery' => 'Pin sạc Li-Po công suất 31.29 Wh'
+                ],
+                'specs_en' => [
+                    'screen' => '11 inches Ultra Retina XDR OLED, 120Hz',
+                    'cpu' => 'Apple M4 9-core CPU',
+                    'ram' => '8 GB',
+                    'storage' => '256 GB',
+                    'battery' => '31.29 Wh Li-Po battery'
                 ],
                 'rating' => 4.9,
                 'reviews_count' => 62,
@@ -133,16 +169,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 5,
                 'category_id' => 4,
                 'name' => 'Apple Watch Series 9 GPS 41mm',
+                'name_en' => 'Apple Watch Series 9 GPS 41mm',
                 'price' => 9490000,
                 'original_price' => 10490000,
                 'image' => 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&q=80&w=600',
                 'description' => 'Apple Watch Series 9 sở hữu màn hình sáng vượt trội, tính năng Double Tap chạm hai lần để tương tác cực kỳ độc đáo và các cảm biến sức khoẻ tân tiến hàng đầu.',
+                'description_en' => 'The Apple Watch Series 9 features an exceptionally bright display, the uniquely innovative Double Tap gesture for hands-free interaction, and the most advanced health sensors yet.',
                 'specs' => [
                     'screen' => 'OLED Retina luôn bật, 2000 nits',
                     'cpu' => 'Apple S9 SiP',
                     'ram' => 'Không công bố',
                     'storage' => '64 GB',
                     'battery' => 'Lên đến 18 giờ (36 giờ chế độ tiết kiệm)'
+                ],
+                'specs_en' => [
+                    'screen' => 'Always-On Retina OLED, 2000 nits',
+                    'cpu' => 'Apple S9 SiP',
+                    'ram' => 'Not disclosed',
+                    'storage' => '64 GB',
+                    'battery' => 'Up to 18 hours (36 hours in Low Power Mode)'
                 ],
                 'rating' => 4.6,
                 'reviews_count' => 95,
@@ -152,16 +197,25 @@ class DatabaseSeeder extends Seeder
                 'id' => 6,
                 'category_id' => 4,
                 'name' => 'Tai nghe Bluetooth Apple AirPods Pro 2 USB-C',
+                'name_en' => 'Apple AirPods Pro 2 USB-C Bluetooth Earbuds',
                 'price' => 5790000,
                 'original_price' => 6190000,
                 'image' => 'https://images.unsplash.com/photo-1588449668365-d15e397f6787?auto=format&fit=crop&q=80&w=600',
                 'description' => 'AirPods Pro thế hệ thứ 2 mang lại khả năng chống ồn chủ động (ANC) tốt gấp hai lần phiên bản tiền nhiệm, cổng sạc Type-C hiện đại và chất âm vòm 3D hoàn mỹ.',
+                'description_en' => 'The 2nd-generation AirPods Pro deliver Active Noise Cancellation twice as effective as the previous version, a modern USB-C charging port, and flawless 3D spatial audio.',
                 'specs' => [
                     'screen' => 'Không có',
                     'cpu' => 'Apple H2 chip',
                     'ram' => 'Không có',
                     'storage' => 'Không có',
                     'battery' => 'Lên đến 6 giờ nghe (30 giờ kèm hộp sạc)'
+                ],
+                'specs_en' => [
+                    'screen' => 'None',
+                    'cpu' => 'Apple H2 chip',
+                    'ram' => 'None',
+                    'storage' => 'None',
+                    'battery' => 'Up to 6 hours of listening (30 hours with charging case)'
                 ],
                 'rating' => 4.8,
                 'reviews_count' => 210,
@@ -177,6 +231,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'IP15PM-256-NAT',
                     'name' => 'Titanium Tự Nhiên',
+                    'name_en' => 'Natural Titanium',
                     'price' => 34990000,
                     'original_price' => 38990000,
                     'stock' => 15,
@@ -186,6 +241,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'IP15PM-256-BLK',
                     'name' => 'Titanium Đen',
+                    'name_en' => 'Black Titanium',
                     'price' => 34500000,
                     'original_price' => 38990000,
                     'stock' => 20,
@@ -195,6 +251,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'IP15PM-256-BLU',
                     'name' => 'Titanium Xanh',
+                    'name_en' => 'Blue Titanium',
                     'price' => 33990000,
                     'original_price' => 38990000,
                     'stock' => 5,
@@ -207,6 +264,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'S24U-256-GRY',
                     'name' => 'Titanium Xám',
+                    'name_en' => 'Titanium Gray',
                     'price' => 29990000,
                     'original_price' => 33990000,
                     'stock' => 12,
@@ -216,6 +274,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'S24U-256-YLW',
                     'name' => 'Titanium Vàng',
+                    'name_en' => 'Titanium Yellow',
                     'price' => 29500000,
                     'original_price' => 33990000,
                     'stock' => 8,
@@ -225,6 +284,7 @@ class DatabaseSeeder extends Seeder
                     'product_id' => $product->id,
                     'sku' => 'S24U-256-BLK',
                     'name' => 'Titanium Đen',
+                    'name_en' => 'Titanium Black',
                     'price' => 28990000,
                     'original_price' => 33990000,
                     'stock' => 3,
